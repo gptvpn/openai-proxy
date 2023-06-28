@@ -6,7 +6,7 @@ export default {
       const oldUrl = new URL(request.url);
 
       if (oldUrl.pathname === "/") {
-        return new Response(`https://${oldUrl.hostname}/v1`, { status: 200 });
+        return new Response(`https://${OPENAI_API_HOST}/v1`, { status: 200 });
       }
 
       const newUrl = new URL(request.url);
